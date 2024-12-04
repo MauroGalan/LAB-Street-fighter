@@ -24,10 +24,15 @@ def test_movimientos_comunes(ruta,player1,player2):
     mov = movimientos_comunes(datos,player1,player2)
     print(f"Los movimientos que tienen en común los jugadores {player1} y {player2} son: {mov}")
 
+def test_dia_mas_combo_finish(ruta):
+    datos = lee_partidas(ruta)
+    dia = dia_mas_combo_finish(datos)
+    print(f"El día de la semana con más combo finish es el: {dia}")
+
 if __name__ == "__main__":
     test_lee_partidas("data/games.csv")
     test_victoria_rapida("data/games.csv")
     test_top_ratio("data/games.csv",5)
     test_enemigos_mas_debiles("data/games.csv","Ken")
     test_movimientos_comunes("data/games.csv","Ryu","Ken")
-    print(dia_mas_combo_finish(lee_partidas("data/games.csv")))
+    test_dia_mas_combo_finish("data/games.csv")

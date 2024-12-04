@@ -28,7 +28,7 @@ def parsea_lista(texto:str)->list[str]:
     return res
 
 def transforma_dia(dianum:int)->str:
-    dias = ["Lunes,Martes,Miércoles,Jueves,Viernes,Sábado,Domingo"]
+    dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
     return dias[dianum]
 
 
